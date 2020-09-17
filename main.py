@@ -13,10 +13,10 @@ def sum_n(n):
     return n 
 
 
-def print_n(s, n):
+def print_n(s,n):
   if n > 0:
     print (s)
-  print_n(s,n-1)
+    print_n(s,n-1)
 
 def run():
   n=input ("Enter an int:")
@@ -26,4 +26,4 @@ def run():
   print_n(s,n)
 
 if __name__== "__main__":
- run()
+  run()
