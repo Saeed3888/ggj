@@ -1,14 +1,9 @@
 #Author: Saeed Alyami ssa5468@psu.edu
-#Collaborator: Stanley Weiblinger skw5659@psu.edu
-#Collaborator: Eric Byjoo ezb5481@psu.edu
-#Collaborator: Kelly Chau kkc5558@psu.edu
-#Section: 3
-#Breakout: 3
 
-def sum_n(n):
+def number_n(n):
   n = int(n)
   if n > 0:
-   return n+sum_n(n-1)
+   return n%10 + number_n(n//10)
   else:
     return n 
 
@@ -16,14 +11,13 @@ def sum_n(n):
 def print_n(s,n):
   if n > 0:
     print (s)
-    print_n(s,n-1)
+    print_n(s,n//10)
 
 def run():
   n = input ("Enter an int: ")
   n = int(n)
-  print(f"sum is {sum_n(n)}.")
-  s = input("Enter a string: ")
-  print_n(s,n)
+  print(f"sum of digits of {n} is {number_n(n)}.")
+  
 
 if __name__== "__main__":
   run()
